@@ -5,8 +5,8 @@ body {
   display: block;
   padding: 0;
   margin: 0;
-  background-color: #f4f4f4;
   font-family: 'Raleway', sans-serif;
+  background: white; /* For browsers that do not support gradients */
 }
 
 *, *:before, *:after {
@@ -24,10 +24,20 @@ body {
   right: 0;
 }
 
+@media screen and (max-width: 606px) {
+    .small {
+        display: none;
+    }
+}
+
 #content {
   width: 100%;
-  height: 50%;
-  background-color: darkgrey;
+  height: 100%;
+  background: darkgrey; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(darkgrey, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(darkgrey, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(darkgrey, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(darkgrey, white); /* Standard syntax */
 }
 
 #content .list {
